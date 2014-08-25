@@ -9,7 +9,6 @@ class ci_profiles::jenkins(
 
   include ci_profiles::jenkins::jobs
   include ci_profiles::jenkins::plugins
-  include openstack_tester::puppet_jobs
 
   Service['jenkins'] ~> Exec['sleep_two_min'] -> Exec['jenkins_jobs_update']
 

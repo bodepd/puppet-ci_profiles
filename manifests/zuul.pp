@@ -35,7 +35,6 @@ class ci_profiles::zuul(
     #git_name             => 'OpenStack Jenkins',
   }
 
-
   file { '/etc/zuul/layout.yaml':
     ensure => present,
     source => 'puppet:///modules/ci_profiles/zuul/layout.yaml',
