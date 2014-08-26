@@ -4,11 +4,20 @@ class ci_profiles::jenkins::plugins {
     version => '2.8',
   }
 
+
+  # github specific plugins
+  jenkins::plugin { 'ssh-agent':
+    version => '1.3',
+  }
+  jenkins::plugin { 'scm-api':
+    version => '0.2',
+  }
+  jenkins::plugin { 'git-client':
+    version => '1.8.0',
+  }
   jenkins::plugin { 'git':
     version => '2.2.2',
   }
-
-  # github specific plugins
   jenkins::plugin { 'github':
     version => '1.9.1',
   }
@@ -17,6 +26,9 @@ class ci_profiles::jenkins::plugins {
   }
   jenkins::plugin { 'github-oauth':
     version => '0.19',
+  }
+  jenkins::plugin { 'ghprb':
+    version => '1.14-5',
   }
 
   jenkins::plugin { 'publish-over-ssh':
