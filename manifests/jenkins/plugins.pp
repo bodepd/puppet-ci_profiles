@@ -49,4 +49,12 @@ class ci_profiles::jenkins::plugins {
   jenkins::plugin { 'ansicolor':
     version => '0.3.1',
   }
+
+  jenkins::plugin { 'copyartifact':
+    version => '1.31',
+  }
+  jenkins::plugin { 'parameterized-trigger':
+    version => '2.25',
+  }
+
 }
